@@ -46,7 +46,7 @@ class MainActivity : ComponentActivity() {
                                 id = "2",
                                 name = "Ethereum",
                                 symbol = "ETH",
-                                percentage = -8.25,
+                                percentage = 8.25,
                                 price = "2000"
                             )
                         )
