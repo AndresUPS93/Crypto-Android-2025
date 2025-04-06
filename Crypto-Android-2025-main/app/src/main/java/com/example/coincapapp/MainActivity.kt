@@ -36,18 +36,18 @@ class MainActivity : ComponentActivity() {
                                 id = "1",
                                 name = "Bitcoin",
                                 symbol = "BTC",
-                                percentage = 5.38,
-                                price = "87800"
+                                percentage = 5.25,
+                                price = "87600"
                             )
                         )
-                        Spacer(modifier = Modifier.size(16.dp))
+                        Spacer(modifier = Modifier.size(14.dp))
                         AssetRow(
                             Asset(
                                 id = "2",
                                 name = "Ethereum",
                                 symbol = "ETH",
-                                percentage = -8.28,
-                                price = "1800"
+                                percentage = -8.25,
+                                price = "2000"
                             )
                         )
 
