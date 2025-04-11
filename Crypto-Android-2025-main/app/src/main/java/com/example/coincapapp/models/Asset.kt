@@ -7,4 +7,3 @@ data class Asset(
     val price: String,
     val percentage: Double
 )
-

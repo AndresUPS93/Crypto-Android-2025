@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     id("kotlin-kapt")
     alias(libs.plugins.hilt.android)
+    alias(libs.plugins.kotlin.serialization)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -55,10 +57,25 @@ dependencies {
     // Dependency Injection
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+    implementation(libs.hilt.navigation.compose)
 
     // Async images
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
+
+    // Ktor
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.okhttp)
+    implementation(libs.ktor.serialization.kotlinx.json)
+    implementation(libs.ktor.client.cio)
+    implementation(libs.ktor.content.negotiation)
+
+    // Serialization
+    implementation(libs.kotlinx.serialization.json)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -67,6 +84,14 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
+
+    //Firebase
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
 }
 
 kapt {
