@@ -34,7 +34,7 @@ fun NavigationGraph(navController: NavHostController) {
     NavHost(navController, startDestination = BottomNavigationItem.Home.route) {
         composable(BottomNavigationItem.Home.route) { AssetsList(navController = navController) }
         composable(BottomNavigationItem.Favourites.route) { Favourites() }
-        composable(BottomNavigationItem.Settings.route) { Settings() }
+        composable(BottomNavigationItem.Settings.route) { SettingsView() }
 
         composable(
             route = "${BottomNavigationItem.Home.route}/{assetId}",

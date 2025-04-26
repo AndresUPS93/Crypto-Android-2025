@@ -11,7 +11,7 @@ class CoinCapApiService @Inject constructor(
     private val client: HttpClient
 ) {
     suspend fun getAssets(): AssetsResponse {
-        val response: HttpResponse = client.get(urlString = "https://rest.coincap.io/v3/assets?apiKey=")
+        val response: HttpResponse = client.get(urlString = "https://2467c6da-aaf8-42cf-a8d7-ff02ba0276f1.mock.pstmn.io/v3/assets")
         return response.body()
     }
 }
